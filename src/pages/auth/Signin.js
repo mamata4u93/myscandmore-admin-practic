@@ -41,23 +41,23 @@ const Signin = () => {
     <div className='login-pages'>
       <AppAnimateGroup type='bottom'>
         <AppPageMetadata title='Signin' />
-        <div className='user-container'>
-          <Card className='user-card user-card-lg'>
+        <div className='login-container'>
+          <Card className='login-card login-card-lg'>
             <AppRowContainer>
               <Col xs={24} md={12}>
-                <div className='user-styled-img'>
+                <div className='login-styled-img'>
                   <Logo />
                 </div>
               </Col>
               <Col xs={24} md={12}>
-                <div className='user-card-header'>
+                <div className='login-card-header'>
                   <h3>
                     <IntlMessages id='common.login' />
                   </h3>
                 </div>
 
                 <Form
-                  className='user-form'
+                  className='login-form'
                   name='basic'
                   initialValues={{
                     remember: true,
@@ -90,11 +90,11 @@ const Signin = () => {
                   </Form.Item>
 
                   {/* <Form.Item
-                    className='user-field-action'
+                    className='login-field-action'
                     name='remember'
                     valuePropName='checked'>
                     <>
-                      <span className='user-field-action-link ml-auto' onClick={onGoToForgetPassword}>
+                      <span className='login-field-action-link ml-auto' onClick={onGoToForgetPassword}>
                         <IntlMessages id='common.forgetPassword' />
                       </span>
                     </>
@@ -102,7 +102,7 @@ const Signin = () => {
                   <Button
                     type='primary'
                     htmlType='submit'
-                    className='user-form-btn'>
+                    className='login-form-btn'>
                     <IntlMessages id='common.login' />
                   </Button>
                 </Form>

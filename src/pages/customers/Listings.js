@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl';
 import { IoMdAdd } from 'react-icons/io';
 import { ReactComponent as NoImg } from '../../assets/user/no-image.svg';
 import { DoubleRightOutlined, EditOutlined, DeleteOutlined, } from '@ant-design/icons';
-import { feachAllData, deleteData, setFormValues } from '../../store/PromosRedux'
+import { feachAllData, deleteData, setFormValues } from '../../store/CustomersRedux'
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -21,9 +21,9 @@ const Listings = () => {
     const timer = useRef(null);
     const [selectedRows, setSelectedRows] = useState([]);
     const token = useSelector((state) => state.auth.token)
-    const formValues = useSelector((state) => state.promo.formValues)
-    const isFetching = useSelector((state) => state.promo.isFetching)
-    const dataLists = useSelector((state) => state.promo.dataLists)
+    const formValues = useSelector((state) => state.customers.formValues)
+    const isFetching = useSelector((state) => state.customers.isFetching)
+    const dataLists = useSelector((state) => state.customers.dataLists)
 
     useEffect(() => {
         // Load List Data
@@ -89,8 +89,8 @@ const Listings = () => {
             key: 'action',
             render: (text, record) => (
                 <Space size='middle'>
-                    <DoubleRightOutlined className='promo-detail' onClick={() => navigate(`/promotions/view/${record._id}`)} />
-                    <EditOutlined className='promo-edit' onClick={() => navigate(`/promotions/edit/${record._id}`)} />
+                    <DoubleRightOutlined className='promo-detail' onClick={() => navigate(`/customers/view/${record._id}`)} />
+                    <EditOutlined className='promo-edit' onClick={() => navigate(`/customers/edit/${record._id}`)} />
                     <Popconfirm
                         title="Are you sure delete this?"
                         onConfirm={() => deleteItem(record)}
@@ -107,11 +107,11 @@ const Listings = () => {
         <>
             <Row>
                 <Col span={12}>
-                    <h3>{messages['sidebar.app.promotions']}</h3>
+                    <h3>Customers</h3>
                 </Col>
                 <Col span={12} >
                     <div className='promo-backbtn'>
-                        <Button type='primary' danger onClick={() => navigate('/promotions/add')}><IoMdAdd size={17} />{messages['add.new']} </Button>
+                        <Button type='primary' danger onClick={() => navigate('/customers/add')}><IoMdAdd size={17} />{messages['add.new']} </Button>
                     </div>
                 </Col>
             </Row>

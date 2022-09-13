@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { Button, Breadcrumb, Form, Row, Col, Input, Space, Image, Table } from 'antd';
+import { Button, Breadcrumb, Form, Row, Col, Input, Space, Image, Table, Tag, Typography} from 'antd';
 import moment from 'moment';
 import { useSelector, useDispatch } from 'react-redux'
 import ListWapper from "../common/ListWapper";
@@ -10,6 +10,7 @@ import { useIntl } from 'react-intl';
 import ReactPlayer from 'react-player';
 import { resetSingleData, feachSingleData } from '../../store/TestmastersRedux'
 
+const { Paragraph, Text } = Typography;
 const dateFormat = 'YYYY-MM-DD';
 const Details = () => {
     const navigate = useNavigate()
@@ -19,7 +20,7 @@ const Details = () => {
     const token = useSelector((state) => state.auth.token)
     const singleData = useSelector((state) => state.testmasters.singleData)
     let brands = singleData?.brands ? singleData.brands : []
-    // console.log(singleData)
+    console.log(singleData)
 
     useEffect(() => {
         if (params.id) {
@@ -40,6 +41,20 @@ const Details = () => {
     //         dataIndex: 'description',
     //     },
     //     {
+    //         title: 'Type',
+    //         dataIndex: 'type',
+    //     },
+    //     {
+    //         title: 'Action',
+    //         key: 'action',
+    //         render: (_, record) => (
+    //           <Space size="middle">
+    //             <a>Invite {record.name}</a>
+    //             <a>Delete</a>
+    //           </Space>
+    //         ),
+    //       },
+    //     {
     //         title: messages['promo.added'],
     //         dataIndex: 'createdAt',
     //         render: (item) => <div>{moment.utc(item).format(dateFormat)}</div>
@@ -52,8 +67,9 @@ const Details = () => {
             <Col xs={12} lg={12}>
                 <Space>
                     <Breadcrumb separator='>'>
-                        <Breadcrumb.Item>{messages['influencers.brands']}</Breadcrumb.Item>
-                        <Breadcrumb.Item>{messages['influencer.view']}</Breadcrumb.Item>
+                        <Breadcrumb.Item>Mannage Test Master</Breadcrumb.Item>
+                        <Breadcrumb.Item>View Test Master</Breadcrumb.Item>
+
                     </Breadcrumb>
                 </Space>
             </Col>
@@ -62,22 +78,17 @@ const Details = () => {
                     <Button type='primary' danger onClick={() => navigate(-1)}><AiFillBackward size={17} />{messages['brand.back']}</Button>
                 </div>
             </Col>
+            {/* <Table columns={columns}  /> */}
             <Col xs={24} lg={24}>
                 <Row gutter={{ xs: 20, sm: 16, md: 32 }} >
-                    <Col xs={24} lg={4} >
+                    <Col xs={24} lg={8} >
                         <div className='promo-detals'>
                             <h5>Name</h5>
                             <p>{singleData?.name}</p>
                         </div>
                     </Col>
-                    <Col xs={24} lg={10} >
-                        <div className='promo-detals'>
-                            <h5>Description</h5>
-                            <p>{singleData?.description}</p>
-                        </div>
-
-                    </Col>
-                    <Col xs={24} lg={9} >
+                    
+                    <Col xs={24} lg={8} >
 
                         <div className='promo-detals'>
                             <h5>Type</h5>
@@ -85,15 +96,23 @@ const Details = () => {
                         </div>
 
                     </Col>
+                    <Col xs={24} lg={8} >
+                        <div className='promo-detals'>
+                            <h5>Action</h5>
+                            <Button type='primary' danger onClick={() => navigate(`/testmasters/edit/${singleData._id}`)}>Edit</Button>
+                        </div>
+                    </Col>
+                    
 
                 </Row>
                 <Row>
-                    <Col xs={24} lg={24} >
+                <Col xs={24} lg={24} >
                         <div className='promo-detals'>
-                            <h5>Action</h5>
-                            <Button type='primary' danger >Edit</Button>
+                            <h5>Description</h5>
+                            <p dangerouslySetInnerHTML={{ __html: singleData?.description}}></p>
                         </div>
-                    </Col>
+
+                    </Col> 
                 </Row>
             </Col>
         </Row>

@@ -34,24 +34,24 @@ const ResetPassword = () => {
     <div className='login-pages'>
       <AppAnimateGroup type='bottom'>
         <AppPageMetadata title='Reset Password' />
-        <div className='user-container' key='a'>
-          <Card className='user-card user-card-lg'>
+        <div className='login-container' key='a'>
+          <Card className='login-card login-card-lg'>
             <AppRowContainer>
-              <Col xs={24} md={12} className='user-styled-reset-img-col'>
-                <div className='user-styled-img user-styled-img-auto'>
+              <Col xs={24} md={12} className='login-styled-reset-img-col'>
+                <div className='login-styled-img login-styled-img-auto'>
                   <Logo />
                 </div>
               </Col>
 
               <Col xs={24} md={12}>
-                <div className='user-card-header'>
+                <div className='login-card-header'>
                   <h3>
                     <IntlMessages id='common.resetPassword' />
                   </h3>
                 </div>
 
                 <Form
-                  className='user-form mb-0'
+                  className='login-form mb-0'
                   name='basic'
                   initialValues={{ remember: true }}
                   onFinish={onFinish}>
@@ -103,7 +103,7 @@ const ResetPassword = () => {
                   <Button
                     type='primary'
                     htmlType='submit'
-                    className='user-form-btn'>
+                    className='login-form-btn'>
                     <IntlMessages id='common.resetMyPassword' />
                   </Button>
                 </Form>

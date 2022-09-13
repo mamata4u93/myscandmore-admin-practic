@@ -34,24 +34,24 @@ const Signup = () => {
     <div className='login-pages'>
       <AppAnimateGroup type='bottom'>
         <AppPageMetadata title='Signup' />
-        <div className='user-container' key='a'>
-          <Card className='user-card user-card-lg'>
+        <div className='login-container' key='a'>
+          <Card className='login-card login-card-lg'>
             <AppRowContainer>
               <Col xs={24} lg={12}>
-                <div className='user-styled-img mln'>
+                <div className='login-styled-img mln'>
                   <Logo />
                 </div>
               </Col>
 
               <Col xs={24} lg={12}>
-                <div className='user-card-header'>
+                <div className='login-card-header'>
                   <h3>
                     <IntlMessages id='common.signup' />
                   </h3>
                 </div>
 
                 <Form
-                  className='user-form'
+                  className='login-form'
                   name='basic'
                   initialValues={{ remember: true }}
                   onFinish={onFinish}
@@ -102,14 +102,14 @@ const Signup = () => {
                   </Form.Item>
 
                   <Form.Item
-                    className='user-field-action user-field-action-row'
+                    className='login-field-action login-field-action-row'
                     name='remember'
                     valuePropName='checked'>
                     <>
                       <Checkbox>
                         <IntlMessages id='common.iAgreeTo' />
                       </Checkbox>
-                      <Link to='/terms' className='user-field-action-link'>
+                      <Link to='/terms' className='login-field-action-link'>
                         <IntlMessages id='common.termConditions' />
                       </Link>
                     </>
@@ -117,17 +117,17 @@ const Signup = () => {
 
                   <Button
                     type='primary'
-                    className='user-form-btn'
+                    className='login-form-btn'
                     htmlType='submit'>
                     <IntlMessages id='common.signup' />
                   </Button>
                 </Form>
 
-                <div className='user-card-footer'>
+                <div className='login-card-footer'>
                   <span>
                     <IntlMessages id='common.alreadyHaveAccount' />
                   </span>
-                  <Link to='/signin' className='user-card-footer-link'>
+                  <Link to='/signin' className='login-card-footer-link'>
                     <IntlMessages id='common.signInHere' />
                   </Link>
                 </div>

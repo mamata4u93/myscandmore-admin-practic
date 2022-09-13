@@ -23,7 +23,7 @@ const Listings = () => {
     const isFetching = useSelector((state) => state.testmasters.isFetching)
     const dataLists = useSelector((state) => state.testmasters.dataLists)
 
-
+console.log(dataLists)
     useEffect(() => {
         // Load List Data
         handlePageChange()
@@ -70,6 +70,7 @@ const Listings = () => {
         {
             title: messages['common.description'],
             dataIndex: 'description',
+            ellipsis: true,
         },
         {
             title: 'Type',

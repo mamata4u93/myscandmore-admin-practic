@@ -11,7 +11,7 @@ import CategoriesRedux from './CategoriesRedux';
 import AdminsRedux from './AdminsRedux';
 import TestmastersRedux from './TestmastersRedux';
 import HashtagsRedux from './HashtagsRedux';
-import PromosRedux from './PromosRedux';
+import CustomersRedux from './CustomersRedux';
 import StoriesRedux from './StoriesRedux';
 import UsersRedux from './UsersRedux';
 
@@ -24,7 +24,7 @@ const reducers = combineReducers({
   categorie: CategoriesRedux,
   admins: AdminsRedux,
   testmasters: TestmastersRedux,
-  promo: PromosRedux,
+  customers: CustomersRedux,
   hashtag: HashtagsRedux,
   stories: StoriesRedux,
   users: UsersRedux,

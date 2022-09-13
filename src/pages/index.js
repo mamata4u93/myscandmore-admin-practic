@@ -8,7 +8,7 @@ import { dashboardConfig } from './dashboard';
 import { errorPagesConfigs } from './errorPages';
 import { routeConfigs } from './admins';
 import { testmastersRouteConfigs } from './testmasters';
-import { promotionsRouteConfigs } from './promotions';
+import { customersRouteConfigs } from './customers';
 import { usersRouteConfigs } from './users';
 import { videosRouteConfigs } from './videos';
 import { storiesRouteConfigs } from './stories';
@@ -29,7 +29,7 @@ const authorizedStructure = {
     ...testmastersRouteConfigs,
     ...videosRouteConfigs,
     ...storiesRouteConfigs,
-    ...promotionsRouteConfigs,
+    ...customersRouteConfigs,
     ...categoriesRouteConfigs,
     ...hashtagsRouteConfigs,
     ...pagesRouteConfigs,
