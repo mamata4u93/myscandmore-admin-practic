@@ -12,9 +12,10 @@ const initialState = {
 }
 
 export const feachAllData = createAsyncThunk(
-    'promo/feachAllData',
+    'customers/feachAllData',
     async (params, { rejectWithValue }) => {
-        const response = await apiGetCall(`/promos`, params)
+        console.log(params)
+        const response = await apiGetCall(`/users`, params)
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
@@ -23,9 +24,9 @@ export const feachAllData = createAsyncThunk(
 )
 
 export const feachSingleData = createAsyncThunk(
-    'promo/feachSingleData',
+    'customers/feachSingleData',
     async (params, { rejectWithValue }) => {
-        const response = await apiGetCall(`/promos`, params)
+        const response = await apiGetCall(`/customers`, params)
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
@@ -34,9 +35,9 @@ export const feachSingleData = createAsyncThunk(
 )
 
 export const addNewData = createAsyncThunk(
-    'promo/addNewData',
+    'customers/addNewData',
     async (params, { rejectWithValue }) => {
-        const response = await apiPostCall(`/promos`, params)
+        const response = await apiPostCall(`/customers`, params)
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
@@ -45,9 +46,9 @@ export const addNewData = createAsyncThunk(
 )
 
 export const editData = createAsyncThunk(
-    'promo/editData',
+    'customers/editData',
     async (params, { rejectWithValue }) => {
-        const response = await apiPutCall(`/promos/${params?._id}`, params)
+        const response = await apiPutCall(`/customers/${params?._id}`, params)
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
@@ -56,9 +57,9 @@ export const editData = createAsyncThunk(
 )
 
 export const deleteData = createAsyncThunk(
-    'promo/deleteData',
+    'customers/deleteData',
     async (params, { rejectWithValue }) => {
-        const response = await apiDeleteCall(`/promos/${params?._id}`, params)
+        const response = await apiDeleteCall(`/customers/${params?._id}`, params)
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
@@ -67,7 +68,7 @@ export const deleteData = createAsyncThunk(
 )
 
 export const counterSlice = createSlice({
-    name: 'promo',
+    name: 'customers',
     initialState,
     reducers: {
         resetAllData: (state) => {

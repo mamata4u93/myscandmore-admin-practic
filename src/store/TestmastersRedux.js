@@ -27,11 +27,13 @@ export const feachAllTestmastersData = createAsyncThunk(
 export const feachSingleData = createAsyncThunk(
     'testmasters/feachSingleData',
     async (params, { rejectWithValue }) => {
-        const response = await apiGetCall(`/testsMater`, params)
+        const response = await apiGetCall(`/testsMater/${params?.id}`, params)
+           
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
-        return response?.data?.data[0] ? response.data.data[0] : null
+        // return response?.data?.data[0] ? response.data.data[0] : null
+        return response
     }
 )
 
@@ -51,6 +53,7 @@ export const editData = createAsyncThunk(
     'testmasters/editData',
     async (params, { rejectWithValue }) => {
         const response = await apiPutCall(`/testsMater/${params?._id}`, params)
+        console.log(response)
         if (response.status === 'error') {
             return rejectWithValue(response.data)
         }
@@ -112,7 +115,7 @@ export const counterSlice = createSlice({
         [feachSingleData.fulfilled]: (state, action) => {
             state.isFetching = false
             state.error = null
-            state.singleData = action?.payload
+            state.singleData = action?.payload?.data
         },
         // Add New Data
         [addNewData.pending]: (state) => {

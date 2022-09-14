@@ -23,22 +23,22 @@ const UnlockScreen = () => {
     <div className='login-pages'>
       <AppAnimateGroup type='bottom'>
         <AppPageMetadata title='Unlock Screen' />
-        <div className='user-container' key='a'>
-          <Card className='user-card user-card-lg user-card-unlock'>
+        <div className='login-container' key='a'>
+          <Card className='login-card login-card-lg login-card-unlock'>
             <AppRowContainer>
               <Col xs={24} md={12}>
-                <div className='user-styled-img user-styled-img-auto'>
+                <div className='login-styled-img login-styled-img-auto'>
                   <Logo />
                 </div>
               </Col>
 
               <Col xs={24} md={12}>
-                <div className='user-card-header'>
+                <div className='login-card-header'>
                   <h3>
                     <IntlMessages id='common.unlockScreen' />
                   </h3>
                 </div>
-                <div className='user-card-para'>
+                <div className='login-card-para'>
                   <span>
                     <IntlMessages id='common.unlockScreenTextOne' />
                   </span>
@@ -48,7 +48,7 @@ const UnlockScreen = () => {
                 </div>
 
                 <Form
-                  className='user-form mb-0'
+                  className='login-form mb-0'
                   name='basic'
                   initialValues={{ remember: true }}
                   onFinish={onFinish}
@@ -67,7 +67,7 @@ const UnlockScreen = () => {
 
                   <Button
                     type='primary'
-                    className='user-form-btn'
+                    className='login-form-btn'
                     htmlType='submit'>
                     <IntlMessages id='common.unlockItForMe' />
                   </Button>

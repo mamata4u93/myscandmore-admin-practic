@@ -33,23 +33,23 @@ const ForgetPassword = () => {
     <div className='login-pages'>
       <AppAnimateGroup type='bottom'>
         <AppPageMetadata title='Forgot Password' />
-        <div className='user-container' key='a'>
-          <Card className='user-card user-card-lg user-card-for-password'>
+        <div className='login-container' key='a'>
+          <Card className='login-card login-card-lg login-card-for-password'>
             <AppRowContainer>
               <Col xs={24} lg={12}>
-                <div className='user-styled-img'>
+                <div className='login-styled-img'>
                   <Logo />
                 </div>
               </Col>
               <Col xs={24} lg={12}>
-                <div className='user-styled-for-password'>
-                  <div className='user-card-header'>
+                <div className='login-styled-for-password'>
+                  <div className='login-card-header'>
                     <h3>
                       <IntlMessages id='common.forgetPassword' />
                     </h3>
                   </div>
 
-                  <div className='user-card-para'>
+                  <div className='login-card-para'>
                     <p className='mb-0'>
                       <IntlMessages id='common.forgetPasswordTextOne' />
                     </p>
@@ -59,7 +59,7 @@ const ForgetPassword = () => {
                   </div>
 
                   <Form
-                    className='user-form mb-0'
+                    className='login-form mb-0'
                     name='basic'
                     initialValues={{ remember: true }}
                     onFinish={onFinish}>
@@ -78,7 +78,7 @@ const ForgetPassword = () => {
                     <Button
                       type='primary'
                       htmlType='submit'
-                      className='user-form-btn'>
+                      className='login-form-btn'>
                       <IntlMessages id='common.sendNewPassword' />
                     </Button>
                   </Form>

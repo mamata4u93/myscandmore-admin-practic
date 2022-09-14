@@ -7,7 +7,7 @@ import moment from 'moment';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import { AiFillBackward } from "react-icons/ai";
-import { resetSingleData, feachSingleData } from '../../store/PromosRedux'
+import { resetSingleData, feachSingleData } from '../../store/CustomersRedux'
 
 const dateFormat = 'YYYY-MM-DD HH:mm';
 

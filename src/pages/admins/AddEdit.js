@@ -10,7 +10,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AiFillBackward } from "react-icons/ai";
 import { resetSingleData, feachSingleData, addNewData, editData } from '../../store/AdminsRedux'
 import { feachAllTestmastersData } from '../../store/TestmastersRedux'
-import { feachAllData } from '../../store/PromosRedux'
+import { feachAllData } from '../../store/CustomersRedux'
 
 const { TextArea } = Input;
 const { Option } = Select;

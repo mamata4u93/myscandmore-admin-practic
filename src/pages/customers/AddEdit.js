@@ -9,7 +9,7 @@ import Selectbox from "../common/AntForms/SelectBox";
 import UploadImage from "../common/UploadImage";
 import { useNavigate, useParams } from 'react-router-dom';
 import { AiFillBackward } from "react-icons/ai";
-import { resetSingleData, feachSingleData, addNewData, editData } from '../../store/PromosRedux'
+import { resetSingleData, feachSingleData, addNewData, editData } from '../../store/CustomersRedux'
 import { feachAllAdminsData } from '../../store/AdminsRedux'
 import { feachAllTestmastersData } from '../../store/TestmastersRedux'
 
@@ -61,7 +61,7 @@ const AddEdit = () => {
     useEffect(() => {
         if (isEditData && pageActive.current) {
             pageActive.current = false
-            navigate('/promotions/list');
+            navigate('/customers/list');
         }
     }, [isEditData]);
 
