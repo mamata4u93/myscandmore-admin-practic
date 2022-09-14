@@ -11,7 +11,7 @@ import { testmastersRouteConfigs } from './testmasters';
 import { promotionsRouteConfigs } from './promotions';
 import { usersRouteConfigs } from './users';
 import { videosRouteConfigs } from './videos';
-import { storiesRouteConfigs } from './stories';
+import { ordersRouteConfigs } from './orders';
 import { categoriesRouteConfigs } from './categories';
 import { hashtagsRouteConfigs } from './hashtags';
 import { pagesRouteConfigs } from './pages';
@@ -28,7 +28,7 @@ const authorizedStructure = {
     ...usersRouteConfigs,
     ...testmastersRouteConfigs,
     ...videosRouteConfigs,
-    ...storiesRouteConfigs,
+    ...ordersRouteConfigs,
     ...promotionsRouteConfigs,
     ...categoriesRouteConfigs,
     ...hashtagsRouteConfigs,

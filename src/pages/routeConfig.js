@@ -42,11 +42,11 @@ const sidebarRouteConfig = [
         path: '/videos/list',
       },
       {
-        id: 'managestories',
-        title: 'Managestories',
-        messageId: 'sidebar.app.Managestories',
+        id: 'orders',
+        title: 'Orders',
+        messageId: 'sidebar.app.orders',
         icon: <FaLeaf />,
-        path: '/stories/list',
+        path: '/orders/list',
       },
       {
         id: 'promotions',

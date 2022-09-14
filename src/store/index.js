@@ -12,7 +12,7 @@ import AdminsRedux from './AdminsRedux';
 import TestmastersRedux from './TestmastersRedux';
 import HashtagsRedux from './HashtagsRedux';
 import PromosRedux from './PromosRedux';
-import StoriesRedux from './StoriesRedux';
+import OrdersRedux from './OrdersRedux';
 import UsersRedux from './UsersRedux';
 
 const reducers = combineReducers({
@@ -26,7 +26,7 @@ const reducers = combineReducers({
   testmasters: TestmastersRedux,
   promo: PromosRedux,
   hashtag: HashtagsRedux,
-  stories: StoriesRedux,
+  orders: OrdersRedux,
   users: UsersRedux,
 });
 
